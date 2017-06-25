@@ -1,0 +1,211 @@
+@font-face {
+  font-family: BebabsNeue;
+  src: url('../assets/_fonts/bebasneue-webfont.woff');
+}
+@font-face {
+  font-family: BebabsNeueRegular;
+  src: url('../assets/_fonts/bebasneue-regular.ttf');
+}
+@font-face {
+  font-family: RobotoBold;
+  src: url('../assets/_fonts/roboto-bold-webfont.woff');
+}
+
+//Color Variables
+$color1: #5c5c5c; //charcoal
+$color2: #4b4b4b; //black
+$color3: #f6c500; //yellow
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.close {
+  position: relative;
+  display: inline-block;
+  width: 62px;
+  height: 62px;
+  overflow: hidden;
+
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    margin-top: -1px;
+    background: $color2;
+  }
+  &:before {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  &:after {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+  &.higher {
+    top: -110px;
+    right: -50px;
+  }
+  &.lower {
+    position: absolute;
+    top:350px;
+  }
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+h1, p {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 82px;
+  @media screen and (max-width: 740px) {
+    font-size: 64px;
+  }
+  font-family: BebabsNeue, sans-serif;
+  text-transform: uppercase;
+  color: $color2;
+}
+
+p {
+  font-size: 17px;
+  font-family: RobotoBold;
+  text-transform: uppercase;
+  color: $color2;
+}
+
+.header {
+  height: 47px;
+  &__social-media ul {
+    margin: 0;
+    li {
+      list-style-type: none;
+      float: left;
+      margin-right: 20px;
+      padding-top: 12px;
+    }
+  }
+  &__morse-image {
+    float:right;
+    @media screen and (max-width: 936px) {
+      display: none;
+    }
+  }
+}
+
+#main {
+  background-image: url("../assets/images/background.jpg");
+  height: 100vh;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .hidden {
+    display: none !important;
+  }
+
+  .container {
+    max-width: 760px;
+    margin: 0 auto;
+    padding-top: 96px;
+
+    &__upper {
+      padding: 0 30px 50px;
+
+        h1 {
+          float: left;
+        }
+        img {
+          padding: 15px 0 0 15px;
+          @media screen and (max-width: 740px) {
+              display: none;
+          }
+        }
+        p {
+          clear: both;
+        }
+
+    }
+
+    &__lower {
+      .translation {
+        border-top: 8px solid $color1;
+        border-bottom: 8px solid $color1;
+        padding: 30px;
+        textarea {
+          background: transparent;
+          color: $color1;
+          resize: none;
+          border: 0 none;
+          width: 78%;
+          font-size: 82px;
+          @media screen and (max-width: 960px) {
+            font-size: 64px;
+          }
+          outline: none;
+          font-family: BebabsNeue, sans-serif;
+          display: inline-block;
+        }
+        .translated-string {
+          width: 78%;
+          font-size: 82px;
+          @media screen and (max-width: 960px) {
+            font-size: 64px;
+          }
+          font-family: BebabsNeue, sans-serif;
+          text-transform: uppercase;
+          color: $color2;
+          height: 184px;
+          display: inline-block;
+          word-wrap: break-word;
+        }
+      }
+    }
+
+    .buttons {
+      margin: 60px 30px;
+      ul {
+        margin: 0;
+        padding: 0;
+        li {
+          list-style-type: none;
+          height: 100px;
+          display: inline-block;
+          margin-right: 25px;
+        }
+      }
+      .button {
+        background-color: $color2;
+        color: $color3;
+        padding: 25px;
+        text-transform: uppercase;
+        border: 0;
+        font-family: BebabsNeueRegular;
+        font-size: 30px;
+        @media screen and (max-width: 740px) {
+          font-size: 20px;
+          padding: 17px;
+        }
+        height: 100px;
+        text-decoration: none;
+      }
+    }
+  }
+}
+

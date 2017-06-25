@@ -1,0 +1,110 @@
+[
+  {
+    "Letter": "A",
+    "Morse": ".-"
+  },
+  {
+    "Letter": "B",
+    "Morse": "-..."
+  },
+  {
+    "Letter": "C",
+    "Morse": "-.-."
+  },
+  {
+    "Letter": "D",
+    "Morse": "-.."
+  },
+  {
+    "Letter": "E",
+    "Morse": "."
+  },
+  {
+    "Letter": "F",
+    "Morse": "..-."
+  },
+  {
+    "Letter": "G",
+    "Morse": "--."
+  },
+  {
+    "Letter": "H",
+    "Morse": "...."
+  },
+  {
+    "Letter": "I",
+    "Morse": ".."
+  },
+  {
+    "Letter": "J",
+    "Morse": ".---"
+  },
+  {
+    "Letter": "K",
+    "Morse": "-.-"
+  },
+  {
+    "Letter": "L",
+    "Morse": ".-.."
+  },
+  {
+    "Letter": "M",
+    "Morse": "--"
+  },
+  {
+    "Letter": "N",
+    "Morse": "-."
+  },
+  {
+    "Letter": "O",
+    "Morse": "---"
+  },
+  {
+    "Letter": "P",
+    "Morse": ".--."
+  },
+  {
+    "Letter": "Q",
+    "Morse": "--.-"
+  },
+  {
+    "Letter": "R",
+    "Morse": ".-."
+  },
+  {
+    "Letter": "S",
+    "Morse": "..."
+  },
+  {
+    "Letter": "T",
+    "Morse": "-"
+  },
+  {
+    "Letter": "U",
+    "Morse": "..-"
+  },
+  {
+    "Letter": "V",
+    "Morse": "...-"
+  },
+  {
+    "Letter": "W",
+    "Morse": ".--"
+  },
+  {
+    "Letter": "X",
+    "Morse": "-..-"
+  },
+  {
+    "Letter": "Y",
+    "Morse": "-.--"
+  },
+  {
+    "Letter": "Z",
+    "Morse": "--.."
+  },
+  {
+    "Letter": " ",
+    "Morse": "/"
+  }
+]
