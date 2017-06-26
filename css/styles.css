@@ -13,40 +13,6 @@
 *, *:before, *:after {
   box-sizing: inherit; }
 
-.close {
-  position: relative;
-  display: inline-block;
-  width: 62px;
-  height: 62px;
-  overflow: hidden; }
-  .close:before, .close:after {
-    content: '';
-    position: absolute;
-    height: 2px;
-    width: 100%;
-    top: 50%;
-    left: 0;
-    margin-top: -1px;
-    background: #4b4b4b; }
-  .close:before {
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    transform: rotate(45deg); }
-  .close:after {
-    -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    -o-transform: rotate(-45deg);
-    transform: rotate(-45deg); }
-  .close.higher {
-    top: -110px;
-    right: -50px; }
-  .close.lower {
-    position: absolute;
-    top: 350px; }
-
 body, html {
   height: 100%;
   margin: 0;
@@ -72,24 +38,34 @@ p {
   color: #4b4b4b; }
 
 .header {
-  height: 47px; }
+  height: 47px;
+  margin: 0 30px;
+  padding: 0;
+  display: flex; }
+  @media screen and (max-width: 936px) {
+    .header {
+      width: 100%;
+      text-align: center; } }
   .header__social-media ul {
-    margin: 0; }
+    display: inline-flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0; }
     .header__social-media ul li {
-      list-style-type: none;
-      float: left;
       margin-right: 20px;
       padding-top: 12px; }
+      .header__social-media ul li .A8 {
+        display: none; }
   .header__morse-image {
-    float: right; }
+    width: 100%;
+    text-align: right; }
     @media screen and (max-width: 936px) {
       .header__morse-image {
         display: none; } }
 
 #main {
   background-image: url("../assets/images/background.jpg");
-  height: 100vh;
-  /* Center and scale the image nicely */
+  height: 115%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; }
@@ -97,10 +73,9 @@ p {
     display: none !important; }
   #main .container {
     max-width: 760px;
-    margin: 0 auto;
-    padding-top: 96px; }
+    margin: 0 auto; }
     #main .container__upper {
-      padding: 0 30px 50px; }
+      padding: 96px 30px 50px; }
       #main .container__upper h1 {
         float: left; }
       #main .container__upper img {
@@ -119,7 +94,7 @@ p {
         color: #5c5c5c;
         resize: none;
         border: 0 none;
-        width: 78%;
+        width: 86%;
         font-size: 82px;
         outline: none;
         font-family: BebabsNeue, sans-serif;
@@ -127,18 +102,51 @@ p {
         @media screen and (max-width: 960px) {
           #main .container__lower .translation textarea {
             font-size: 64px; } }
+        @media screen and (max-width: 580px) {
+          #main .container__lower .translation textarea {
+            height: 250px; } }
       #main .container__lower .translation .translated-string {
-        width: 78%;
+        width: 86%;
         font-size: 82px;
+        min-height: 181px;
         font-family: BebabsNeue, sans-serif;
         text-transform: uppercase;
         color: #4b4b4b;
-        height: 184px;
         display: inline-block;
         word-wrap: break-word; }
         @media screen and (max-width: 960px) {
           #main .container__lower .translation .translated-string {
             font-size: 64px; } }
+      #main .container__lower .translation .close {
+        position: relative;
+        display: inline-block;
+        width: 62px;
+        height: 62px;
+        overflow: hidden; }
+        #main .container__lower .translation .close:before, #main .container__lower .translation .close:after {
+          content: '';
+          position: absolute;
+          height: 2px;
+          width: 100%;
+          top: 50%;
+          left: 0;
+          margin-top: -1px;
+          background: #4b4b4b; }
+        #main .container__lower .translation .close:before {
+          -webkit-transform: rotate(45deg);
+          -moz-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+          -o-transform: rotate(45deg);
+          transform: rotate(45deg); }
+        #main .container__lower .translation .close:after {
+          -webkit-transform: rotate(-45deg);
+          -moz-transform: rotate(-45deg);
+          -ms-transform: rotate(-45deg);
+          -o-transform: rotate(-45deg);
+          transform: rotate(-45deg); }
+        #main .container__lower .translation .close.lower {
+          position: absolute;
+          top: 365px; }
     #main .container .buttons {
       margin: 60px 30px; }
       #main .container .buttons ul {

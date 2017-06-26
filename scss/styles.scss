@@ -2,10 +2,12 @@
   font-family: BebabsNeue;
   src: url('../assets/_fonts/bebasneue-webfont.woff');
 }
+
 @font-face {
   font-family: BebabsNeueRegular;
   src: url('../assets/_fonts/bebasneue-regular.ttf');
 }
+
 @font-face {
   font-family: RobotoBold;
   src: url('../assets/_fonts/roboto-bold-webfont.woff');
@@ -18,47 +20,6 @@ $color3: #f6c500; //yellow
 
 *, *:before, *:after {
   box-sizing: inherit;
-}
-
-.close {
-  position: relative;
-  display: inline-block;
-  width: 62px;
-  height: 62px;
-  overflow: hidden;
-
-  &:before, &:after {
-    content: '';
-    position: absolute;
-    height: 2px;
-    width: 100%;
-    top: 50%;
-    left: 0;
-    margin-top: -1px;
-    background: $color2;
-  }
-  &:before {
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    transform: rotate(45deg);
-  }
-  &:after {
-    -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    -o-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-  }
-  &.higher {
-    top: -110px;
-    right: -50px;
-  }
-  &.lower {
-    position: absolute;
-    top:350px;
-  }
 }
 
 body, html {
@@ -91,17 +52,29 @@ p {
 
 .header {
   height: 47px;
+  margin: 0 30px;
+  padding: 0;
+  display: flex;
+  @media screen and (max-width: 936px) {
+    width: 100%;
+    text-align: center;
+  }
   &__social-media ul {
+    display: inline-flex;
+    list-style-type: none;
     margin: 0;
+    padding: 0;
     li {
-      list-style-type: none;
-      float: left;
       margin-right: 20px;
       padding-top: 12px;
+      .A8 {
+        display: none;
+      }
     }
   }
   &__morse-image {
-    float:right;
+    width: 100%;
+    text-align: right;
     @media screen and (max-width: 936px) {
       display: none;
     }
@@ -110,8 +83,7 @@ p {
 
 #main {
   background-image: url("../assets/images/background.jpg");
-  height: 100vh;
-  /* Center and scale the image nicely */
+  height: 115%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -123,24 +95,21 @@ p {
   .container {
     max-width: 760px;
     margin: 0 auto;
-    padding-top: 96px;
 
     &__upper {
-      padding: 0 30px 50px;
-
-        h1 {
-          float: left;
+      padding: 96px 30px 50px;
+      h1 {
+        float: left;
+      }
+      img {
+        padding: 15px 0 0 15px;
+        @media screen and (max-width: 740px) {
+          display: none;
         }
-        img {
-          padding: 15px 0 0 15px;
-          @media screen and (max-width: 740px) {
-              display: none;
-          }
-        }
-        p {
-          clear: both;
-        }
-
+      }
+      p {
+        clear: both;
+      }
     }
 
     &__lower {
@@ -153,7 +122,7 @@ p {
           color: $color1;
           resize: none;
           border: 0 none;
-          width: 78%;
+          width: 86%;
           font-size: 82px;
           @media screen and (max-width: 960px) {
             font-size: 64px;
@@ -161,19 +130,57 @@ p {
           outline: none;
           font-family: BebabsNeue, sans-serif;
           display: inline-block;
+          @media screen and (max-width: 580px) {
+            height: 250px;
+          }
         }
         .translated-string {
-          width: 78%;
+          width: 86%;
           font-size: 82px;
+          min-height: 181px;
           @media screen and (max-width: 960px) {
             font-size: 64px;
           }
           font-family: BebabsNeue, sans-serif;
           text-transform: uppercase;
           color: $color2;
-          height: 184px;
           display: inline-block;
           word-wrap: break-word;
+        }
+        .close {
+          position: relative;
+          display: inline-block;
+          width: 62px;
+          height: 62px;
+          overflow: hidden;
+          &:before, &:after {
+            content: '';
+            position: absolute;
+            height: 2px;
+            width: 100%;
+            top: 50%;
+            left: 0;
+            margin-top: -1px;
+            background: $color2;
+          }
+          &:before {
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+          }
+          &:after {
+            -webkit-transform: rotate(-45deg);
+            -moz-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+            -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+          }
+          &.lower {
+            position: absolute;
+            top: 365px;
+          }
         }
       }
     }

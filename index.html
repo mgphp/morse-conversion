@@ -14,64 +14,73 @@
 <header class="header">
     <div class="header__social-media">
         <ul>
-        <li><a href="https://twitter.com/mgphp" class="twitter-follow-button" data-show-count="false">Follow
-            @mgphp</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-        <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="standard"
-             data-action="like" data-size="small" data-show-faces="true" data-share="true"></div></li>
-        <li>
-        <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="false"></div>
-        <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&width=79&layout=button_count&action=like&size=small&show_faces=false&share=false&height=21&appId=1642445299312835" width="79" height="21" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-        <!-- Place this tag in your head or just before your close body tag. -->
-        </li>
-        <li>
-        <script src="https://apis.google.com/js/platform.js" async defer></script>
+            <li><a href="https://twitter.com/test"
+                   class="twitter-follow-button"
+                   data-show-count="false">Follow</a>
+                <script async src="//platform.twitter.com/widgets.js"
+                        charset="utf-8"></script>
+            </li>
+            <li>
+                <iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fmorse-converter.local&width=61&layout=button_count&action=like&size=small&show_faces=false&share=false&height=21&appId=1642445299312835" width="61" height="21" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+            </li>
+            <li>
+                <script src="https://apis.google.com/js/platform.js" async
+                        defer></script>
 
-        <!-- Place this tag where you want the +1 button to render. -->
-        <div class="g-plusone" data-annotation="inline" data-width="300"></div>
-        </li>
+                <!-- Place this tag where you want the +1 button to render. -->
+                <div class="g-plusone" data-annotation="inline"
+                     data-width="300"></div>
+            </li>
 
         </ul>
     </div>
     <div class="header__morse-image">
-        <img class="morse-code" src="assets/images/morse-code.png" />
+        <img class="morse-code" src="assets/images/morse-code.png"/>
     </div>
 
 </header>
 <div id="main">
     <div class="container">
-            <div class="container__upper inner">
-                <h1>Talk in code</h1>
-                <img class="morse-code" src="assets/images/morse-code.png" />
+        <div class="container__upper inner">
+            <h1>Talk in code</h1>
+            <img class="morse-code" src="assets/images/morse-code.png"/>
 
-            <p>Translate your message into Morse Code and share it with your friends</p>
-            </div>
+            <p>Translate your message into Morse Code and share it with your
+                friends</p>
+        </div>
         <div class="container__lower">
             <div class="translation">
                 <div class="translate-string">
-                    <textarea name="text" placeholder="Enter your message to coded here" id="textarea"></textarea>
-                    <div class="close higher"></div>
+                    <textarea name="text"
+                              placeholder="Enter your message to coded here"
+                              id="textarea"></textarea>
                     <div class="translated-string hidden"></div>
-                    <div class="close lower hidden"></div>
+                    <div class="close lower"></div>
                 </div>
-
 
 
             </div>
             <div class="buttons">
                 <div class="buttons__translate">
-                    <a class="button" onclick="getStrTranslate()">TRANSLATE MY MESSAGE TO MORSE CODE</a>
+                    <a class="button" onclick="getStrTranslate()">TRANSLATE MY
+                        MESSAGE TO MORSE CODE</a>
                 </div>
                 <div class="buttons__shares hidden">
                     <ul>
-                   <li><a onclick="window.open(this.href, '',
-                   'menubar=no','toolbar=no','resizable=no','scrollbars=no','height=400,width=400'); return false"
-                       class="button"
-                       href="https://twitter.com/home?status=">Tweet
-                       It</a></li>
-                    <li><a target=_blank  class="button"
-                                href="https://www.facebook.com/sharer/sharer.php?u=">Facebook
-                        It</a></li>
-                    <li><a target=_blank class="button" href="https://plus.google.com/share?url=">Google+ It</a></li>
+                        <li><a class="button"
+                               href="https://twitter.com/intent/tweet?text=talk-in-code"
+                               data-size="large">
+                            Tweet it</a></li>
+                        <li>
+                            <a class="button" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse', 'sharer', 'toolbar=0,status=0,width=548,height=325');" href="javascript: void(0)">
+                                Facebook It
+                            </a>
+                        </li>
+                        <li>
+
+                            <a class="button" title="google+" onclick="googlePlusBtn()">Google+ It</a>
+
+                        </li>
                     </ul>
                 </div>
             </div>
